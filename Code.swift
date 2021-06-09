@@ -19,6 +19,34 @@ class Todo {
 	}
 }
 
+class Group {
+    var name: String
+    var todoList : [Todo]
+    
+    init(name: String) {
+        self.name = name
+        self.todoList = []
+    }
+    
+    func getList() -> [Todo] {
+        return self.todoList
+    }
+        
+    
+    func addTodo(todo : Todo) -> Bool {
+        todoList.append(todo)
+        return true
+    }
+    
+    func printGroup(){
+        print("\(todoList[0].description)")
+    }
+}
+
+func contain(group: [Group] , name: String) -> Bool {
+  return false
+}
+
 enum SortType {
 	case time
     case title
@@ -51,6 +79,7 @@ func sort(type: SortType, _ ascending: Bool) {
 }
 
 var todoList: [Todo] = []
+var group: [Group] = []
 
 var exit = false
 var invalid = false
@@ -180,6 +209,16 @@ while !exit {
 			}
 			print("List sorted")
 		case 6:
+			print("Please enter a name to create group")
+            		var n = readLine()
+           		if contain(group: group , name: n!) {
+                	print("this name exists in groups")
+                	break
+            		} else {
+                	print("group added successfuly")
+                	group.append(Group(name : n!))
+                	break
+            		}
       			break
     		case 7:
        			break
