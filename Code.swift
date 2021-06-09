@@ -65,9 +65,12 @@ while !exit {
 		print("1. Add todo item")
 		print("2. See all todo items")
 		print("3. Edit todo items")
-    	print("4. Delete todo item")
+    		print("4. Delete todo item")
 		print("5. Sort todo items")
-		print("6. Exit")
+		print("6.Add Group")
+    		print("7.Add todo to one group")
+    		print("8.show one group todos")
+		print("9. Exit")
 		var x = readLine()
 		xInt = Int(x!) ?? 0
 	}
@@ -177,7 +180,13 @@ while !exit {
 			}
 			print("List sorted")
 		case 6:
-			exit = true
+      			break
+    		case 7:
+       			break
+    		case 8:
+        		break
+    		case 9:
+      			exit = true
 		default:
 			print("invalid choice")
 	}
