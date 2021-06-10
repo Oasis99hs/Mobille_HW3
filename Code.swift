@@ -96,9 +96,9 @@ while !exit {
 		print("3. Edit todo items")
     		print("4. Delete todo item")
 		print("5. Sort todo items")
-		print("6.Add Group")
-    		print("7.Add todo to one group")
-    		print("8.show one group todos")
+		print("6. Add Group")
+    		print("7. Add todo to one group")
+    		print("8. show one group todos")
 		print("9. Exit")
 		var x = readLine()
 		xInt = Int(x!) ?? 0
